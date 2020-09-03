@@ -57,7 +57,7 @@ class SearchRepositoriesActivity : AppCompatActivity() {
         setContentView(view)
 
         // get the view model
-        viewModel = ViewModelProvider(this, Injection.provideViewModelFactory())
+        viewModel = ViewModelProvider(this, Injection.provideViewModelFactory(this))
                 .get(SearchRepositoriesViewModel::class.java)
 
         // add dividers between RecyclerView's row items
@@ -156,6 +156,6 @@ class SearchRepositoriesActivity : AppCompatActivity() {
 
     companion object {
         private const val LAST_SEARCH_QUERY: String = "last_search_query"
-        private const val DEFAULT_QUERY = "Android"
+        private const val DEFAULT_QUERY = "AKMohite"
     }
 }
